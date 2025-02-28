@@ -1,4 +1,4 @@
-property	label	Description	1-APPEAR                        2-DISAPPEAR                    3-MERGE                            4-SPLIT                               5-EXPAND                           6-CONTRACT                     7-IDCHANGE                       8-NAMECHANGE               9-DESCRIPTIONCHANGE 0-NOCHANGE	STATECHANGE INHERENT TO PREDICATE?
+property	label	Description	1-APPEAR                        2-DISAPPEAR                    3-MERGE                            4-SPLIT                               5-EXPAND                           6-CONTRACT                     7-IDCHANGE                       8-NAMECHANGE               9-DESCRIPTIONCHANGE  10-DEFORMATION         0-NOCHANGE	STATECHANGE INHERENT TO PREDICATE?
 P31	"instance	of"	"that class of which this subject is a particular example and member; different from P279 (subclass of); for example: K2 is an instance of mountain; volcano is a subclass of mountain (and an instance of volcanic landform)"	0	n
 P31279	instance of/subclass of 		0	n
 P17	"country	sovereign"	state that this item is in (not to be used for human beings)	0	n
@@ -116,6 +116,7 @@ P7104	end of covered period	end of period covered by an archive set, a historica
 P1196	manner of death	"general circumstances of a person's death; e.g. natural causes, accident, suicide, homicide, etc.  Use 'cause of death' (P509) for the specific physiological mechanism, e.g. heart attack, trauma, pneumonia etc."	2	y
 P7888	merged into	the subject was dissolved and merged into the object, that existed previously	3	y
 P807	separated from	subject was founded or started by separating from identified object	4	n
+P1120	number of deaths	total (cumulative) number of people who died since start as a direct result of an event or cause	5	y
 P856	"official	website"	"URL of the official page of an item (current or former). Usage: If a listed URL no longer points to the official website, do not remove it, but see the ""Hijacked or dead websites"" section of the Talk page"	7	n
 P646	"Freebase	ID"	"identifier for a page in the Freebase database. Format: ""/m/0"" followed by 2 to 7 characters. For IDs starting with ""/g/"", use Google Knowledge Graph ID (P2671)"	7	n
 P2671	"Google	Knowledge Graph ID"	"identifier for Google Knowledge Graph API, starting with ""/g/"". For IDs starting with ""/m/"", use Freebase ID (P646)"	7	n
@@ -2369,6 +2370,7 @@ P10114	Natural History Museum (London) person ID	identifier for a person (includ
 P10112	Australian Statistical Geography 2021 ID	identifier of a geographic region defined in the Australian Statistical Geography Standard 2021	7	n
 P10088	Dissernet institution ID	identifier for an educational or other institution on Dissernet	7	n
 P10000	Research Vocabularies Australia ID	identifier of a vocabulary in Research Vocabularies Australia	7	n
+P10022	Treccani's Dizionario di Medicina ID	identifier for an item in the Dizionario di Medicina on the Institute of the Italian Encyclopaedia website	7	n
 P1448	"official	name"	official name of the subject in its official language(s)	8	n
 P1813	"short	name"	short name of a place, organisation, person, journal, wikidata property, etc. Used by some Wikipedia templates.	8	n
 P1705	"native	label"	label for the items in their official language  or their original language	8	n
@@ -2411,63 +2413,61 @@ P131	"located	in the administrative territorial entity"	the item is located on t
 P527	"has	part(s)"	"part of this subject; inverse property of ""part of"" (P361). See also ""has parts of the class"" (P2670)."	9	n
 P373	"Commons	category"	"name of the Wikimedia Commons category containing files related to this item (without the prefix ""Category:"")"	9	n
 P625	"coordinate	location"	geocoordinates of the subject. For Earth, please note that only WGS84 coordinating system is supported at the moment	9	n
-P452	"industry	specific"	industry of company or organization	9	n
+P452	"industry 	"	specific industry of company or organization	10	n
 P1454	"legal	form"	legal form of an entity	9	n
 P101	"field	of work"	"specialization of a person or organization; see P106 for the occupation"	9	n
 P18	"image	image"	"of relevant illustration of the subject; if available, also use more specific properties (sample: coat of arms image, locator map, flag image, signature image, logo image, collage image)"	9	n
-P910	"topic's	main category"	main Wikimedia category	9	n
+P910	"topic's	main category"	main Wikimedia category	10	n
 P361	"part	of"	"object of which the subject is a part (if this subject is already part of object A which is a part of object B, then please only make the subject part of object A), inverse property of ""has part"" (P527, see also ""has parts of the class"" (P2670))"	9	n
-P749	"parent	organization"	parent organization of an organization, opposite of subsidiaries (P355)	9	n
 P463	"member	of"	organization, club or musical group to which the subject belongs. Do not use for membership in ethnic or social groups, nor for holding a political position, such as a member of parliament (use P39 for that)	9	n
 P276	"location	"	location of the object, structure or event. In the case of an administrative entity as containing item use P131. For statistical entities use P8138. In the case of a geographic entity use P706. Use P7153 for locations associated with the object	9	n
 P1001	"applies	to jurisdiction"	the item (institution, law, public office, public register...) or statement belongs to or has power over or applies to the value (a territorial jurisdiction: a country, state, municipality, ...)	9	n
-P355	"has	subsidiary"	"subsidiary of a company or organization; generally a fully owned separate corporation. Compare with ""business division"" (P199). Opposite of parent organization (P749)."	9	n
 P6375	"street	address"	"full street address where subject is located. Include building number, city/locality, post code, but not country; use also P669 if the street has its own separate item"	9	n
 P154	"logo	image"	graphic mark or emblem commonly used by commercial enterprises, organizations and products	9	n
 P921	"main	subject"	primary topic of a work (see also P180: depicts)	9	n
 P281	"postal	code"	identifier assigned by postal authorities for the subject area or building	9	n
 P137	"operator	person,"	profession, organization or entity that operates the equipment, facility, or service	9	n
 P488	"chairperson	presiding"	member of an organization, group or body	9	n
-P1056	"product,	material, or service produced or provided"	material or product produced or sold by an organization, industry, facility, or process	9	n
+P1056	"product,	material, or service produced or provided"	material or product produced or sold by an organization, industry, facility, or process	10	n
 P485	"archives	at"	the institution holding the subject's archives	9	n
 P6379	"has	works in the collection"	collection that has works of this person or organisation (use archives at [P485] for archives)	9	n
 P7959	"historic	county"	traditional, geographical division of Great Britain and Ireland	9	n
 P7938	"associated	electoral district"	constituencies/electoral districts in which a place is located or is part of. If a municipality/county is split into or part of several districts: add several values. Use only if distinct from administrative entities (P131) in predefined countries	9	n
 P2541	"operating	area"	geographic area or jurisdiction an organisation or industry operates in, serves, or has responsibility for	9	n
-P641	sport	sport that the subject participates or participated in or is associated with	9	n
+P641	sport	sport that the subject participates or participated in or is associated with	10	n
 P138	"named	after"	"entity or event that inspired the subject's name, or namesake (in at least one language). Qualifier ""applies to name"" (P5168) can be used to indicate which one"	9	n
 P1037	"director	/ manager"	person who manages any kind of group	9	n
-P1269	"facet	of"	"topic of which this item is an aspect; item that offers a broader perspective on the same topic"	9	n
+P1269	"facet	of"	"topic of which this item is an aspect; item that offers a broader perspective on the same topic"	10	n
 P1366	"replaced	by"	"other person or item which continues the item by replacing it in its role. Use P156 (""followed by"") if the item is not replaced nor identical, but adds to the series (e.g. books in a series)."	9	n
-P1416	"affiliation	"	organization that a person or organization is affiliated with (not necessarily member of or employed by)	9	n
-P1963	"properties	for this type"	when this subject is used as object of “instance of”, the following properties normally apply	9	n
+P1416	"affiliation	"	organization that a person or organization is affiliated with (not necessarily member of or employed by)	10	n
+P1963	"properties	for this type"	when this subject is used as object of “instance of”, the following properties normally apply	10	n
 P1317	"floruit	date"	when the person was known to be active or alive, when birth or death not documented	9	n
 P2388	"position	held by head of the organization"	position of the head of this item	9	n
 P150	"contains	the administrative territorial entity"	(list of) direct subdivisions of an administrative territorial entity	9	n
 P710	"participant	"	"person,	group of people or organization (object) that actively takes/took part in an event or process (subject).  Preferably qualify with ""object has role"" (P3831). Use P1923 for participants that are teams."	9	n
 P3320	"board	member"	member(s) of the board for the organization	9	n
 P1344	"participant	in"	"event in which a person or organization was/is a participant; inverse of P710 or P1923"	9	n
-P2354	"has	list"	Wikimedia list related to this subject	9	n
-P366	"has	use"	main use of the subject (includes current and former usage)	9	n
-P2650	interested in	item of special or vested interest to this person or organisation	9	n
+P2354	"has	list"	Wikimedia list related to this subject	10	n
+P366	"has	use"	main use of the subject (includes current and former usage)	10	n
+P2650	interested in	item of special or vested interest to this person or organisation	10	n
 P9279	Egapro gender equality index	index value for a company per regulations in France	9	n
-P2652	partnership with	partnership (commercial or/and non-commercial) between this organization and another organization or institution	9	n
-P121	item operated	equipment, installation or service operated by the subject	9	n
+P2652	partnership with	partnership (commercial or/and non-commercial) between this organization and another organization or institution	10	n
+P121	item operated	equipment, installation or service operated by the subject	10	n
 P92	main regulatory text	text setting the main rules by which the subject is regulated	9	n
-P1142	political ideology	political ideology of an organization or person or of a work (such as a newspaper)	9	n
+P1142	political ideology	political ideology of an organization or person or of a work (such as a newspaper)	10	n
 P5514	accredited by	"optionally use together with ""subject has role"" (P2868)"	9	n
 P241	military branch	branch to which this military unit, award, office, or person belongs, e.g. Royal Navy	9	n
 P3342	significant person	person linked to the item in any possible way	9	n
 P169	chief executive officer	highest-ranking corporate officer appointed as the CEO within an organization	9	n
-P2283	uses	item or concept used by the subject or in the operation (see also instrument [P1303] and armament [P520])	9	n
+P2283	uses	item or concept used by the subject or in the operation (see also instrument [P1303] and armament [P520])	10	n
 P407	language of work or name	"language associated with this creative work (such as books, shows, songs, broadcasts or websites) or a name (for persons use ""native language"" (P103) and ""languages spoken, written or signed"" (P1412))"	9	n
 P2670	has part(s) of the class	the subject has one or more parts of the object class	9	n
 P1451	motto text	short motivation sentence associated to item	9	n
 P2813	house publication	media that speaks for an organization or a movement, and that is usually edited by its members	9	n
 P793	significant event	significant or notable events associated with the subject	9	n
 P8324	funder	entity that gives money to a person, organization, or project for a specific purpose	9	n
-P1552	has characteristic	inherent or distinguishing quality or feature of the entity. Use a more specific property when possible	9	n
-P140	religion or worldview	religion of a person, organization or religious building, or associated with this subject	9	n
+P1552	has characteristic	inherent or distinguishing quality or feature of the entity. Use a more specific property when possible	10	n
+P140	religion or worldview	religion of a person, organization or religious building, or associated with this subject	10	n
 P180	depicts	"entity visually depicted in an image, literarily described in a work, or otherwise incorporated into an audiovisual or other medium; see also P921,  'main subject'"	9	n
 P3989	members have occupation	some or all members of this group share the occupation	9	n
 P607	conflict	battles, wars or other military engagements in which the person or item participated	9	n
@@ -2475,9 +2475,9 @@ P2936	language used	language widely used (spoken or written) in this place or at
 P242	locator map image	geographic map image which highlights the location of the subject within some larger entity	9	n
 P41	flag image	image of the item's flag	9	n
 P414	stock exchange	exchange on which this company is traded	9	n
-P136	genre	creative work's genre or an artist's field of work (P101). Use main subject (P921) to relate creative works to their topic	9	n
+P136	genre	creative work's genre or an artist's field of work (P101). Use main subject (P921) to relate creative works to their topic	10	n
 P1891	signatory	person, country, or organization that has signed an official document (use P50 for author)	9	n
-P106	occupation	"occupation of a person; see also ""field of work"" (Property:P101), ""position held"" (Property:P39)"	9	n
+P106	occupation	"occupation of a person; see also ""field of work"" (Property:P101), ""position held"" (Property:P39)"	10	n
 P859	sponsor	organization or individual that sponsors this item	9	n
 P37	official language	language designated as official by this item	9	n
 P135	movement	literary, artistic, scientific or philosophical movement or scene associated with this person or work. For political ideologies use P1142.	9	n
@@ -2489,14 +2489,14 @@ P1532	country for sport	country a person or a team represents when playing a spo
 P94	coat of arms image	image of the item's coat of arms - for the shield part only use P4004	9	n
 P2572	hashtag	"reference keyword associated with this item for online communities (do not include the ""#"" symbol which is often used as a prefixed indicator)"	9	n
 P1412	languages spoken, written or signed	language(s) that a person or a people speaks, writes or signs, including the native language(s)	9	n
-P2360	intended public	this work, product, object or event is intended for, or has been designed to that person or group of people, animals, plants, etc	9	n
+P2360	intended public	this work, product, object or event is intended for, or has been designed to that person or group of people, animals, plants, etc	10	n
 P3876	category for alumni of educational institution	category containing people who studied at this institution	9	n
 P937	work location	location where persons or organisations were actively participating in employment, business or other work	9	n
 P2094	competition class	official classification by a regulating body under which the subject (events, teams, participants, or equipment) qualifies for inclusion	9	n
 P5460	grants	confers degree, honor, award, prize, title, certificate or medal denoting achievement to a person or organization	9	n
 P2522	competition won	competition or sports event won by the subject	9	n
 P8972	small logo or icon	logo or icon that represents the item and can be rendered at sizes as small as 16×16 pixels	9	n
-P3984	subreddit	name of the Reddit forum associated to this subject	9	n
+P3984	subreddit	name of the Reddit forum associated to this subject	10	n
 P797	authority	entity having executive power on given entity	9	n
 P3730	next higher rank	"higher rank or level in a ranked hierarchy like sport league, military ranks. If there are several possible, list each one and qualify with ""criterion used"" (P1013), avoid using ranks and date qualifiers. For sports leagues/taxa, use specific properties instead."	9	n
 P7153	significant place	significant or notable places associated with the subject	9	n
@@ -2509,15 +2509,15 @@ P1245	OmegaWiki Defined Meaning	"""Defined Meaning"" on the site"	9	n
 P1308	position holder	persons who hold and/or held the position	9	n
 P4195	category for employees of the organization	Wikimedia category for people who work or worked at this organization	9	n
 P11137	Reddit	identifier of a topic on Reddit	9	n
-P1612	Commons Institution page	"name of the institutions's page on Wikimedia Commons (without the prefix ""Institution"")"	9	n
+P1612	Commons Institution page	"name of the institutions's page on Wikimedia Commons (without the prefix ""Institution"")"	10	n
 P664	organizer	person or institution organizing an event	9	n
 P10624	official observer status in organisation	Organisation by which the subject is granted observer status	9	n
 P1661	Alexa rank	"the website's Alexa ranking with ""point in time"" (P585) as a qualifier for each value"	9	n
 P199	organizational divisions	organizational divisions of this organization (which are not independent legal entities)	9	n
 P3095	practiced by	type of agents that study this subject or work in this field	9	n
-P1387	political alignment	political position within the left–right political spectrum	9	n
+P1387	political alignment	political position within the left–right political spectrum	10	n
 P158	seal image	image of subject's seal (emblem)	9	n
-P737	influenced by	this person, idea, etc. is informed by that other person, idea, etc., e.g. “Heidegger was influenced by Aristotle”	9	n
+P737	influenced by	this person, idea, etc. is informed by that other person, idea, etc., e.g. “Heidegger was influenced by Aristotle”	10	n
 P84	architect	person or architectural firm responsible for designing this building	9	n
 P30	continent	continent of which the subject is a part	9	n
 P3975	general secretary	leader of a political or international organization, sometimes below the chairperson (P488)	9	n
@@ -2525,14 +2525,14 @@ P2425	service ribbon image	an image depicting the ribbon associated with a medal
 P27	country of citizenship	the object is a country that recognizes the subject as its citizen	9	n
 P912	has facility	the subject item has this type of facility, e.g. toilet, car park	9	n
 P4791	commanded by	commander of a military unit/army/security service, operation, etc.	9	n
-P2868	subject has role	"role/generic identity of the item (""subject"") in the context of a statement. For the role of the value of the statement (""object""), use P3831 (""object has role""). For acting roles, use P453 (""character role""). For persons, use P39."	9	n
+P2868	subject has role	"role/generic identity of the item (""subject"") in the context of a statement. For the role of the value of the statement (""object""), use P3831 (""object has role""). For acting roles, use P453 (""character role""). For persons, use P39."	10	n
 P35	head of state	official with the highest formal authority in a country/state	9	n
 P1346	winner	"winner of a competition or similar event, not to be used for awards (instead use ""award received"" (P166) on awardee's item, possibly qualified with ""for work"" (P1686)) or for wars or battles"	9	n
-P1535	used by	item or concept that makes use of the subject (use sub-properties when appropriate)	9	n
+P1535	used by	item or concept that makes use of the subject (use sub-properties when appropriate)	10	n
 P7763	copyright status as a creator	states if the body of work published during the lifetime of this creator is still copyrighted or in the public domain	9	n
-P2596	culture	human culture or people (or several cultures) associated with this item	9	n
+P2596	culture	human culture or people (or several cultures) associated with this item	10	n
 P2389	organization directed by the office or position	organization which is directed by this office	9	n
-P7163	typically sells	type of goods particular type of shops typically sell	9	n
+P7163	typically sells	type of goods particular type of shops typically sell	10	n
 P945	allegiance	country (or other power) that the person or group serves	9	n
 P123	publisher	organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software	9	n
 P36	capital	seat of government of a country, province, state or other type of administrative territorial entity	9	n
@@ -2569,12 +2569,12 @@ P767	contributor to the creative work or subject	person or organization that con
 P2175	medical condition treated	disease that this pharmaceutical drug, procedure, or therapy is used to treat	9	n
 P98	editor	person who checks and corrects a work (such as a book, newspaper, academic journal, etc.) to comply with a rules of certain genre. Also applies to person who establishes the text of an ancient written work or manuscript.	9	n
 P825	dedicated to	person or organization to whom the subject was dedicated	9	n
-P6346	statutory purpose	main statutory purpose of an organization as defined in its articles of association	9	n
+P6346	statutory purpose	main statutory purpose of an organization as defined in its articles of association	10	n
 P2910	icon	"pictogram suitable to represent the item. For logos of a subject, use ""logo image"" (P154); for favicons, use ""small logo or icon"" (P8972)"	9	n
 P2184	history of topic	"item about the historical development of a subject's topic, example: ""history of Argentina"" for ""Argentina"". To list key events of the topic, use ""significant event"" (P793)"	9	n
 P5995	kit supplier	official supplier of sports goods to a given sports club, sportsperson or a national sports team	9	n
 P2416	sports discipline competed in	discipline an athlete competed in within a sport	9	n
-P2012	cuisine	type of food served by a restaurant or restaurant chain or national food culture	9	n
+P2012	cuisine	type of food served by a restaurant or restaurant chain or national food culture	10	n
 P6802	related image	less fitting image, used only because a better alternative is not available. If an appropriate image of the item is available, use P18 instead. Value should not be a generic placeholder.	9	n
 P425	field of this occupation	field corresponding to this occupation or profession (use only for occupations/professions - for people use Property:P101, for companies use P452)	9	n
 P8001	endorsed by	public support given by a person or organization to a political or other campaign	9	n
@@ -2582,7 +2582,7 @@ P1299	depicted by	object depicting this subject (object being creative works suc
 P9100	GitHub topic	GitHub topic for a repository or subject	9	n
 P4272	DPLA subject term	term for an item's subject area in the Digital Public Library of America	9	n
 P823	speaker	person who is speaker for this event, ceremony, keynote, presentation or in a literary work	9	n
-P5817	state of use	to indicate state of use of a building, monument, etc. It is not related with its heritage protection (P1435), but to its present state of use. Ex.: abandoned, in use, temporarily closed, etc.	9	n
+P5817	state of use	to indicate state of use of a building, monument, etc. It is not related with its heritage protection (P1435), but to its present state of use. Ex.: abandoned, in use, temporarily closed, etc.	10	n
 P3279	statistical leader	leader of a sports tournament in one of statistical qualities (points, assists, rebounds etc.). Don't use for overall winner. Use a qualifier to link to the item about the quality.	9	n
 P122	basic form of government	subject's government	9	n
 P195	collection	art, museum, archival, or bibliographic collection of which the subject is part	9	n
@@ -2614,17 +2614,17 @@ P2795	directions	describe how to find the subject - directions, objects along wa
 P118	league or competition	league or competition in which team or player has played, or in which an event occurs	9	n
 P61	discoverer or inventor	subject who discovered, first described, invented, or developed this discovery or invention or scientific hypothesis or theory	9	n
 P5250	IAB code	code for an Internet Advertising Bureau (IAB) Quality Assurance Guidelines (QAG) segment	9	n
-P2770	source of income	source of income of an organization or person	9	n
+P2770	source of income	source of income of an organization or person	10	n
 P9937	Postimees topic ID	identifier for topics in the online version of Estonia's daily newspaper Postimees	9	n
 P1792	category of associated people	Wikimedia category for people associated with this place or organization	9	n
 P172	ethnic group	subject's ethnicity (consensus is that a VERY high standard of proof is needed for this field to be used. In general this means 1) the subject claims it themselves, or 2) it is widely agreed on by scholars, or 3) is fictional and portrayed as such)	9	n
 P7867	category for maps or plans	name of the Wikimedia category specifically for maps or plans of this item	9	n
 P38	currency	currency used by item	9	n
-P176	manufacturer	(main or final) manufacturer or producer of this product	9	n
-P1557	manifestation of	inherent and characteristic embodiment of a given concept	9	n
+P176	manufacturer	(main or final) manufacturer or producer of this product	10	n
+P1557	manifestation of	inherent and characteristic embodiment of a given concept	10	n
 P4379	youth wing	group of younger people associated with this organization	9	n
 P3612	Le Monde diplomatique subject ID	identifier for a topic in the French newspaper Le Monde diplomatique	9	n
-P2043	length	measured dimension of an object	9	n
+P2043	length	measured dimension of an object	10	n
 P88	commissioned by	person or organization that commissioned this work	9	n
 P6849	DR topic ID	identifier for a topic for news on DR's website	9	n
 P5832	political coalition	agreement for cooperation between different political parties	9	n
@@ -2669,7 +2669,7 @@ P1906	office held by head of state	political office that is fulfilled by the hea
 P9549	official podcast	official podcast of this person or organization	9	n
 P3912	newspaper format	physical size of a newspaper (berliner, broadsheet, tabloid, etc.)	9	n
 P2578	is the study of	"the object that an academic field studies; distinct from field of work (P101), which is used for human, organization, etc."	9	n
-P1546	motto	description of the motto of the subject	9	n
+P1546	motto	description of the motto of the subject	10	n
 P708	diocese	"administrative division of the church to which the element belongs; use P5607 for other types of ecclesiastical territorial entities"	9	n
 P287	designed by	person or organization which designed the object	9	n
 P2049	width	width of an object	9	n
@@ -2686,7 +2686,7 @@ P1071	location of creation	"place where the item was conceived or made; where ap
 P8875	indexed in bibliographic review	bibliographic review(s) and/or database(s) which index this academic journal	9	n
 P5816	state of conservation	to indicate state of conservation of a building, monument, artifact, etc. It is not related with its heritage protection (P1435), but to its present state of conservation. Ex.: ruinous, demolished, correct, etc.	9	n
 P551	residence	the place where the person is or has been, resident	9	n
-P462	color	color of subject	9	n
+P462	color	color of subject	10	n
 P371	presenter	main role in presenting a radio or television program or a performing arts show	9	n
 P1885	cathedral	principal church of a religious district	9	n
 P2937	parliamentary term	term of a parliament or any deliberative assembly	9	n
@@ -2700,13 +2700,13 @@ P5252	winter view	image of the subject in winter, preferably with snow	9	n
 P5023	activity policy in this place	policy for activities in this place, for example no photos, photos allowed, no flash, lighting fires, flying drones, etc.	9	n
 P417	patron saint	patron saint adopted by the subject	9	n
 P2846	disabled accessibility	describes disabled accessibility of location or event	9	n
-P2789	connects with	item with which the item is physically connected	9	n
+P2789	connects with	item with which the item is physically connected	10	n
 P264	record label	brand and trademark associated with the marketing of subject music recordings and music videos	9	n
 P2555	fee	fee or toll payable to use, transit or enter the subject (only for one-time fees, do NOT use it for an ongoing fee, tuition fee or trading fee)	9	n
 P237	coat of arms	subject's coat of arms	9	n
 P4345	director of archaeological fieldwork	person leading the archaeological or anthropological investigation at a given site	9	n
 P3896	geoshape	geographic data from Wikimedia Commons	9	n
-P3032	adjacent building	building adjacent to the item	9	n
+P3032	adjacent building	building adjacent to the item	10	n
 P8989	category for the view of the item	category for the view of this item (object, place)	9	n
 P8464	content partnership category	Wikimedia Commons category for media files contributed by this institution	9	n
 P822	mascot	mascot of an organization, e.g. a sports team or university	9	n
@@ -2731,7 +2731,7 @@ P9721	image of entrance	view of an entry point of an architectural structure, ve
 P870	instrumentation	combination of musical instruments employed in a composition or accompanying a (folk) dance	9	n
 P66	ancestral home	place of origin for ancestors of subject	9	n
 P57	director	director(s) of film, TV-series, stageplay, video game or similar	9	n
-P3113	does not have part	expected part that the item does not have (for qualities, use P6477)	9	n
+P3113	does not have part	expected part that the item does not have (for qualities, use P6477)	10	n
 P3014	laws applied	the constitutional and statutory provisions that were the primary basis for a decision or law	9	n
 P2614	World Heritage criteria	selection criteria for UNESCO's cultural and natural 'World Heritage' designation since 2005	9	n
 P114	airline alliance	alliance the airline belongs to	9	n
@@ -2745,7 +2745,7 @@ P7419	gender educated	genders educated at this educational institution	9	n
 P6803	taxon found at location	plant or animals taxon described as present in location, not countries or first-level subnational entities. Requires reference. Ref should cover a limited number of taxa for specific location.	9	n
 P629	edition or translation of	is an edition or translation of this entity	9	n
 P5748	Basisklassifikation	corresponding class in the Basisklassifikation library classification	9	n
-P3438	vehicle normally used	vehicle the subject normally uses	9	n
+P3438	vehicle normally used	vehicle the subject normally uses	10	n
 P2612	TED topic ID	identifier of a topic, in the TED database of talks	9	n
 P1640	curator	content specialist responsible for this collection or exhibition	9	n
 P8419	Archive of Our Own tag	tag for this item on Archive of Our Own	9	n
@@ -2755,7 +2755,7 @@ P1414	GUI toolkit or framework	framework or toolkit a program uses to display th
 P11924	IMDb keyword	IMDb keyword related to movies and television programs	9	n
 P1190	Universal Decimal Classification	library classification of this topic	9	n
 P9239	affiliated worker organisation	organization representing workers in a specific company	9	n
-P7936	business model	business model a business enterprise or creative work operates under	9	n
+P7936	business model	business model a business enterprise or creative work operates under	10	n
 P790	approved by	item is approved by other item(s) [qualifier: statement is approved by other item(s)]	9	n
 P7284	The Independent topic ID	identifier for an topic on The Independent site	9	n
 P7047	enemy	opponent character or group of this fictive character or group	9	n
@@ -2787,7 +2787,7 @@ P8345	media franchise	this creative work belongs to this media franchise	9	n
 P805	statement is subject of	(qualifying) item that describes the relation identified in this statement	9	n
 P7228	access restriction status	status of any access restrictions on the object, collection, or materials. Indicates whether the material is available to the general public or not.	9	n
 P7081	quotation or excerpt	quotation or excerpt from this work. No quotation marks needed	9	n
-P4543	has listed ingredient	"substance that's listed as ingredient on the packaging of the product; use P1545 to qualify the order of the listed ingredients"	9	n
+P4543	has listed ingredient	"substance that's listed as ingredient on the packaging of the product; use P1545 to qualify the order of the listed ingredients"	10	n
 P449	original broadcaster	network(s) or service(s) that originally broadcast a radio or television program	9	n
 P4004	escutcheon image	use for the shield part only: use P94 for a coat of arms	9	n
 P375	space launch vehicle	type of rocket or other vehicle for launching subject payload into outer space	9	n
@@ -2801,8 +2801,8 @@ P1336	territory claimed by	administrative divisions that claim control of a give
 P10960	harvested organism(s)	taxon or common name for the organism(s) that are harvested in this fishery, industry, or other harvesting enterprise	9	n
 P10234	Der Spiegel topic ID	"identifier for topics in the German news portal ""Der Spiegel"""	9	n
 P931	place served by transport hub	territorial entity or entities served by this transport hub (airport, train station, etc.)	9	n
-P8952	inappropriate property for this type	property that should not be present for instances of that element	9	n
-P868	foods traditionally associated	foods associated with an event, place, or people	9	n
+P8952	inappropriate property for this type	property that should not be present for instances of that element	10	n
+P868	foods traditionally associated	foods associated with an event, place, or people	10	n
 P5894	tuition fee	the tuition fee at an educational instition (default duration:1 year, use duration qualifier to specify)	9	n
 P5256	OpenCorporates corporate grouping	companies grouped together at OpenCorporates	9	n
 P4967	prerequisite	prior event or achievement that a person or team needs to complete before joining or obtaining the item topic, e.g. a qualifying round of a sports event, a lower-level course in an educational program, or a lower level of a professional qualification	9	n
@@ -2812,7 +2812,7 @@ P2500	league level below	the league below this sports league	9	n
 P2392	teaching method	teaching method adopted by an educational institution	9	n
 P2238	official symbol	official symbol of an organisation	9	n
 P208	executive body	branch of government for the daily administration of the territorial entity	9	n
-P2048	height	vertical length of an entity	9	n
+P2048	height	vertical length of an entity	10	n
 P181	taxon range map image	range map of a taxon	9	n
 P1659	related property	used to indicate another property that might provide additional information about the subject	9	n
 P12913	class of object(s) of occurrence	class that includes the object(s) to which this occurrence (or class of occurrence) occurs or occurred	9	n
@@ -2916,11 +2916,11 @@ P1740	category for films shot at this location	the object is a category for film
 P1408	licensed to broadcast to	place that a radio/TV station is licensed/required to broadcast to	9	n
 P11738	handled, mitigated, or managed by	approach or method that can be used to address an issue or problem	9	n
 P1139	floors below ground	total number of below ground floors of the building	9	n
-P10672	raw material processed	raw or intermediate material, or a natural resource converted or consumed by a factory or industrial process, to manufacture a product, or to deliver energy (not to be confused with P186 that is used with products)	9	n
+P10672	raw material processed	raw or intermediate material, or a natural resource converted or consumed by a factory or industrial process, to manufacture a product, or to deliver energy (not to be confused with P186 that is used with products)	10	n
 P9901	issuing agent of work	"organization, agency, or other entity responsible for issuing a serial or other continuing resource, such as the official publication of the entity; distinct from commercial publisher of the resource"	9	n
 P9883	created for	"a work, event, etc. for which the subject work was created (e.g., a presidential inauguration that a poem was written for; a competition that a play was created for; a film that a screenplay was written for)"	9	n
 P9714	taxon range	geographic area(s) where a taxon is found	9	n
-P9488	field of usage	specialized area or terminology where this sense is used	9	n
+P9488	field of usage	specialized area or terminology where this sense is used	10	n
 P943	programmer	the programmer that wrote the piece of software	9	n
 P942	theme music	theme music/song used by the item	9	n
 P9349	France 24 topic ID (Arabic)	identifier of a topic on the Arabic version of the France 24 website	9	n
@@ -2961,7 +2961,7 @@ P2567	amended by	document is amended by specified other document	9	n
 P2411	Artsy gene	generalization of artwork type, technique, material, genre, movement, etc. from artsy.net	9	n
 P209	highest judicial authority	supreme judicial body within a country, administrative division, or other organization	9	n
 P1442	image of grave	picture of a person or animal's grave, gravestone or tomb	9	n
-P1419	shape	shape of an object	9	n
+P1419	shape	shape of an object	10	n
 P1393	proxy	person authorized to act for another	9	n
 P12933	relates to sustainable development goal, target or indicator	indicates a relation between the subject and the SDGs or one of the components	9	n
 P129	physically interacts with	physical entity that the subject interacts with	9	n
@@ -3005,7 +3005,7 @@ P802	student	notable student(s) of the subject individual	9	n
 P7995	NHS Health A to Z ID	identifier for a health condition in the NHS Health A to Z	9	n
 P7937	form of creative work	structure of a creative work	9	n
 P7861	category for files created with program	Commons category for files created with that program	9	n
-P7469	orientation	axis of alignment of an item, or direction perpendicular to its primary face (specify with P518 if necessary)	9	n
+P7469	orientation	axis of alignment of an item, or direction perpendicular to its primary face (specify with P518 if necessary)	10	n
 P6758	supported sports team	sports team for which a person or a group is a supporter	9	n
 P6697	Football Money League rank	rank in the Deloitte Football Money League	9	n
 P6553	personal pronoun	personal pronoun(s) this person goes by	9	n
@@ -3026,7 +3026,7 @@ P5522	Unicode block	Unicode block that a character or code point is in	9	n
 P5412	romanization of Belarusian (2007 system)	romanization of Belarusian (2007)	9	n
 P541	office contested	title of office which election will determine the next holder of	9	n
 P5353	school district	school district to which a settlement or other item belongs	9	n
-P522	type of orbit	orbit a satellite has around its central body	9	n
+P522	type of orbit	orbit a satellite has around its central body	10	n
 P5196	output device	output device used to interact with a software, video game console or video card	9	n
 P5185	grammatical gender	grammatical gender of the word	9	n
 P5178	glossary entry at Wikipedia URL	description of a concept in a glossary at Wikipedia. Use sitelinks for Wikipedia articles.  Format: use full URL including anchor (#)	9	n
@@ -3071,16 +3071,16 @@ P2361	online service	online service or online service provider tied to an item	9
 P2315	comment (DEPRECATED)	"to be deleted: replace with ""syntax clarification"" (P2916) or add the usage note in the items description."	9	n
 P2262	draft	"depth below the water line to the bottom of a vessel's hull; summer draft is implied unless stated otherwise."	9	n
 P2261	beam	width of a ship at its widest point measured at its nominal waterline	9	n
-P2244	periapsis	distance, at which a celestial body is the closest to the object it orbits	9	n
-P2243	apoapsis	distance, at which a celestial body is the farthest to the object it orbits	9	n
-P2234	volume as quantity	quantity of three-dimensional space	9	n
-P2146	orbital period	the time taken for a given astronomic object to make one complete orbit about another object	9	n
+P2244	periapsis	distance, at which a celestial body is the closest to the object it orbits	10	n
+P2243	apoapsis	distance, at which a celestial body is the farthest to the object it orbits	10	n
+P2234	volume as quantity	quantity of three-dimensional space	10	n
+P2146	orbital period	the time taken for a given astronomic object to make one complete orbit about another object	10	n
 P2109	nominal power output	power produced by the engine, plant, or reactor (use with unit of power)	9	n
 P210	party chief representative	chief representative of a party in an institution or an administrative unit (use qualifier to identify the party)	9	n
-P2061	aspect ratio (W:H)	image width to height ratio of films, photographs, and other images	9	n
-P2052	speed	magnitude of the velocity of the item	9	n
-P2045	orbital inclination	orbital inclination of a stable orbit	9	n
-P1884	hair color	person's hair color. Use P585 as qualifier if there's more than one value	9	n
+P2061	aspect ratio (W:H)	image width to height ratio of films, photographs, and other images	10	n
+P2052	speed	magnitude of the velocity of the item	10	n
+P2045	orbital inclination	orbital inclination of a stable orbit	10	n
+P1884	hair color	person's hair color. Use P585 as qualifier if there's more than one value	10	n
 P184	doctoral advisor	person who supervised the doctorate or PhD thesis of the subject	9	n
 P1809	choreographer	person(s) who did the choreography	9	n
 P1684	inscription	inscriptions, markings and signatures on an object	9	n
@@ -3092,7 +3092,7 @@ P1592	prosecutor	person representing the prosecuting authority, at a trial	9	n
 P1431	executive producer	executive producer of a movie, TV show, or other piece of media or entertainment	9	n
 P14	traffic sign	graphic symbol describing the item, used at the side of or above roads to give instructions or provide information to road users	9	n
 P1399	convicted of	crime a person was convicted of	9	n
-P1340	eye color	color of the irises of a person's eyes	9	n
+P1340	eye color	color of the irises of a person's eyes	10	n
 P1339	number of injured	number of people with non-fatal injuries in an event	9	n
 P1335	coordinates of westernmost point	westernmost point of a location	9	n
 P1334	coordinates of easternmost point	easternmost point of a location	9	n
@@ -3116,14 +3116,14 @@ P10654	rack system	type of rack-and-cogwheel system used by a certain rack railw
 P10527	documentation files at	institution that holds documentation files about the subject	9	n
 P1049	worshipped by	religion or group/civilization that worships a given deity	9	n
 P1011	excluding	usually used as a qualifier	9	n
+P451	unmarried partner	"someone with whom the person is in a relationship without being married. Use ""spouse"" (P26) for married couples"	9	n
+P26	spouse	"the subject has the object as their spouse (husband, wife, partner, etc.). Use ""unmarried partner"" (P451) for non-married companions"	9	n
+P39	position held	subject currently or formerly holds the object position or public office	9	n
 P1365	"replaces person,	state or item replaced."	"Use ""structure replaces"" (P1398) for structures. Use ""follows"" (P155) if the previous item was not replaced or predecessor and successor are identical"	9	y
 P170	creator	maker of this creative work or other object (where no more specific property exists)	9	y
 P3842	located in the present-day administrative territorial entity	"the item was located in the territory of this present-day administrative unit; however the two did not at any point coexist in time"	9	y
 P6885	historical region	geographic area which at some point in time had a cultural, ethnic, linguistic or political basis, regardless of present-day borders	9	y
 P542	officially opened by	person that officially opened the event or place	9	y
-P451	unmarried partner	"someone with whom the person is in a relationship without being married. Use ""spouse"" (P26) for married couples"	9	n
-P26	spouse	"the subject has the object as their spouse (husband, wife, partner, etc.). Use ""unmarried partner"" (P451) for non-married companions"	9	n
-P39	position held	subject currently or formerly holds the object position or public office	9	n
 P495	"country	of origin"	country of origin of this item (creative work, food, phrase, product, etc.)	1-2	n
 P2097	term length of position	length of time in years (unit: Q577) a person (usually a politician) is to serve in a particular position. Do not add bounds.	1-2	n
 P127	"owned	by"	owner of the subject	3-4	n
@@ -3200,7 +3200,6 @@ P2351	number of graves	number of burial places in a cemetery or necropolis	5-6	n
 P10649	number of likes	number of likes, favorites, stars, upvotes, or reactions received on a social media post or profile	5-6	n
 P10610	number of teachers	number of teachers at an educational facility	5-6	n
 P2047	duration	length of time of an event or process	5-6	y
-P1120	number of deaths	total (cumulative) number of people who died since start as a direct result of an event or cause	5-6	y
 P13204	Wellcome Collection concept ID	identifier for a person or topic, in the Wellcome Collection catalogue	7-9	n
 P2079	fabrication method	method, process or technique used to grow, cook, weave, build, assemble, manufacture the item	8-9	n
 P97	noble title	titles held by the person	8-9	n
@@ -3209,4 +3208,5 @@ P1830	"owner	of"	entities owned by the subject	3-4-5-6	n
 P2046	area	area occupied by an object	3-4-5-6	n
 P47	shares border with	countries or administrative subdivisions, of equal level, that this item borders, either by land or water. A single common point is enough.	3-4-5-6	n
 P8368	number of branches	number of branches or stores affiliated with a chain, brand or company	3-4-5-6	n
-P10022	Treccani's Dizionario di Medicina ID	identifier for an item in the Dizionario di Medicina on the Institute of the Italian Encyclopaedia website	7	n
+P749	"parent	organization"	parent organization of an organization, opposite of subsidiaries (P355)	3-4-5-6–9	n
+P355	"has	subsidiary"	"subsidiary of a company or organization; generally a fully owned separate corporation. Compare with ""business division"" (P199). Opposite of parent organization (P749)."	3-4-5-6–9	n
