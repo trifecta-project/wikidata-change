@@ -10,3 +10,6 @@ This repository contains the code used to execute the following workflow:
 
 The number preceding each file correspond to the sections in the paper in which the step in the workflow is described. Data can be found in the folder _data_
 
+
+_Funded by the European Union under grant agreement 101088548 - TRIFECTA. Views and opinions expressed are however those of the author only and do not necessarily reflect those of the European Union or the European Research Council. Neither the European Union nor the granting authority can be held responsible for them._
+
